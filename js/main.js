@@ -40,6 +40,7 @@ window.results = [];
                 window.results.push(data);
                 $('#result-message-code').html('results[' + (window.results.length - 1) + ']');
                 $('#result-message-extra').show();
+                $('#underscore-toggle').show();
                 console.info('Results stored on results[' + (window.results.length - 1) + ']');
 
                 $('.loader').hide();
@@ -58,10 +59,28 @@ window.results = [];
         });
     }
 
+    /**
+     * Function that loads/unloads Underscore.js
+     */
+    function toggleUnderscore() {
+        var url = 'http://underscorejs.org/underscore-min.js';
+
+        if (!window._) {
+            $.getScript(url);
+            console.info('Underscore.js was loaded!');
+        }
+        else {
+            window._ = undefined;
+            console.info('Underscore.js was removed!');
+        }
+    }
+
     // Init Semantic UI components
     semanticInit();
 
     // Event binding
     $('#launch-request').click(launchRequest);
+
+    $('#underscore').click(toggleUnderscore);
 
 })(window);
