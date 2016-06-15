@@ -29,6 +29,7 @@ window.results = [];
         $.ajax({
             url: url,
             method: method,
+            crossDomain: $('#cors').prop('checked'),
             success: function(data, textStatus, jqXHR) {
                 $('#result-message').removeClass('red');
                 $('#result-message').addClass('ui message green');
