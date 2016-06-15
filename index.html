@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trying Semantic UI</title>
+    <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <div class="page">
+        <h1>Rest Handler JS</h1>
+        <div class="sub header">Make your API REST calls and then handle the response on the JavaScript console!</div>
+
+        <div class="ui divider"></div>
+
+        <div class="ui fluid left right labeled input" id="url-input">
+            <div class="ui dropdown label">
+                <div class="text" id="method">GET</div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <div class="item">GET</div>
+                    <!-- div class="item">POST</div -->
+                </div>
+            </div>
+            <input id="url" type="text" placeholder="http://www.example.com">
+            <button class="ui button green" id="launch-request">Go!</button>
+        </div>
+        <br/>
+        <div class="ui active small loader centered hidden"></div>
+        <br/>
+        <div id="result-message">
+            <div class="header">
+                Status: <code id="result-message-status"></code>
+            </div>
+            <ul class="list" id="result-message-extra">
+                <li>Response stored on <code id="result-message-code"></code></li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/semantic.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

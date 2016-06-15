@@ -1,0 +1,15 @@
+body {
+  padding: 15px;
+  font-family: "Courier New"; }
+
+.page {
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.sub.header {
+  font-weight: bold; }
+
+#result-message {
+  display: none; }
+
+/*# sourceMappingURL=styles.css.map */
