@@ -15,4 +15,8 @@ body {
 #underscore-toggle {
   display: none; }
 
+#delete-results {
+  display: none;
+  font-family: "Courier New"; }
+
 /*# sourceMappingURL=styles.css.map */
