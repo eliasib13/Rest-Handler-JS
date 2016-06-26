@@ -41,6 +41,7 @@ window.results = [];
                 $('#result-message-code').html('results[' + (window.results.length - 1) + ']');
                 $('#result-message-extra').show();
                 $('#underscore-toggle').show();
+                $('#delete-results').show();
                 console.info('Results stored on results[' + (window.results.length - 1) + ']');
 
                 $('.loader').hide();
@@ -75,12 +76,28 @@ window.results = [];
         }
     }
 
-    // Init Semantic UI components
+    /**
+     * Function that deletes results
+     */
+    function deleteResults() {
+        window.results = [];
+
+        $('#result-message').hide();
+        $('#result-message-extra').hide();
+        $('#underscore-toggle').hide();
+        $('#delete-results').hide();
+
+        console.info('Removed results!');
+    }
+
+        // Init Semantic UI components
     semanticInit();
 
     // Event binding
     $('#launch-request').click(launchRequest);
 
     $('#underscore').click(toggleUnderscore);
+
+    $('#delete-results').click(deleteResults);
 
 })(window);
