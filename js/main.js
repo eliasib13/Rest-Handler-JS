@@ -99,5 +99,7 @@ window.results = [];
     $('#underscore').click(toggleUnderscore);
 
     $('#delete-results').click(deleteResults);
+    $('#delete-results').mouseenter(function() { $(this).removeClass('basic'); });
+    $('#delete-results').mouseleave(function() { $(this).addClass('basic'); });
 
 })(window);
