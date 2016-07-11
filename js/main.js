@@ -16,6 +16,11 @@ window.results = [];
             .dropdown()
         ;
 
+        //Init modal
+        $('.ui.modal')
+            .modal()
+        ;
+
     }
 
     /**
@@ -101,5 +106,9 @@ window.results = [];
     $('#delete-results').click(deleteResults);
     $('#delete-results').mouseenter(function() { $(this).removeClass('basic'); });
     $('#delete-results').mouseleave(function() { $(this).addClass('basic'); });
+
+    $('#info-underscore').click(function() {
+      $('.ui.modal').modal('show');
+    })
 
 })(window);
